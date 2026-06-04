@@ -8,6 +8,7 @@ import bookRouter from './routes/books.routes.js';
 import authRouter from './routes/auth.routes.js';
 import connectToTheDatabase from './database/monogodb.js';
 import errorMiddleware from './middleware/error.middleware.js';
+import cors from 'cors';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors())
 
 app.use('/api/auth', authRouter);
 app.use('/api/users', userRouter);
