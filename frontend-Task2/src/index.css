@@ -1,0 +1,17 @@
+/* Minimal global stylesheet */
+@import url('./styles/globals.css');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  display: block;
+}
