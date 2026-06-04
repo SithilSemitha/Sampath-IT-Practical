@@ -1,0 +1,17 @@
+/* Global styles */
+@import url('./styles/Navigation.css');
+@import url('./styles/Hero.css');
+@import url('./styles/Features.css');
+@import url('./styles/CTA.css');
+@import url('./styles/Footer.css');
+
+/* Root Level Container */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
