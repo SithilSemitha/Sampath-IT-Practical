@@ -1,0 +1,52 @@
+/* Pricing Card Component */
+.pricing-card {
+  position: relative;
+  padding: var(--spacing-2xl);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: all 300ms ease;
+}
+
+.pricing-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-glow); border-color: var(--color-accent-primary); }
+.pricing-card--popular { border-color: var(--color-accent-primary); box-shadow: 0 0 20px rgba(108, 99, 255, 0.2); }
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pricing-title { margin: 0 0 var(--spacing-md) 0; color: var(--color-text-primary); font-size: 20px; font-weight: 600; }
+
+.pricing-amount { display: flex; align-items: baseline; margin: var(--spacing-lg) 0; gap: var(--spacing-xs); }
+.pricing-currency { color: var(--color-text-secondary); font-size: 16px; }
+.pricing-value { color: var(--color-accent-primary); font-size: 36px; font-weight: 700; }
+.pricing-period { color: var(--color-text-secondary); font-size: 14px; }
+
+.pricing-features { list-style: none; padding: 0; margin: var(--spacing-lg) 0; }
+.pricing-feature { padding: var(--spacing-sm) 0; color: var(--color-text-secondary); font-size: 14px; display: flex; gap: var(--spacing-sm); }
+.feature-check { color: var(--color-accent-green); font-weight: 700; flex-shrink: 0; }
+
+.pricing-btn {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.pricing-btn--primary { background: var(--gradient-primary); color: white; }
+.pricing-btn--primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-glow); }
+.pricing-btn--secondary { background: transparent; color: var(--color-accent-primary); border: 1px solid var(--color-border); }
+.pricing-btn--secondary:hover { background: var(--color-bg-secondary); border-color: var(--color-accent-primary); }
+
