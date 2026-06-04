@@ -1,0 +1,32 @@
+const errorMiddleware = (err, req, res, next) => {
+    try{
+        let error = {};
+        error.message = err.message;
+        error.name = err.name;
+        error.statusCode = err.statusCode;
+        console.error("Error: ", err.message);
+
+        //Mongoose bad ObjectId error
+        if(err.name === 'CastError'){
+            const message = "Resource not found ";
+            error = new Error ( message );
+            error.statusCode = 400;
+        }
+
+        //Mongoose Duplicate Key
+        if(err.code === 11000){
+            const message = "Duplicate Value Inserted";
+            error = new Error (message);
+            error.statusCode = 400;
+        }
+
+        res.status(error.statusCode || 500).json({ success: false, error: error.message || "Server Error" });
+
+    }
+    catch(error){
+        next(error);
+    }
+};
+
+
+export default errorMiddleware; 
