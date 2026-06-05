@@ -34,7 +34,7 @@ function LoginForm() {
       <h2 id="login-modal-title">Sign In</h2>
       
       <div className="form-group">
-        <label htmlFor="email" className="form-label">Email Address</label>
+        <label htmlFor="email" className="form-label">Email Addre ss</label>
         <input
           id="email"
           type="email"
