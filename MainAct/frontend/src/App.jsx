@@ -72,6 +72,7 @@ function App() {
       password: authForm.password,
       ...(authMode === 'sign-up' ? { name: authForm.name } : {}),
     };
+    
     const url = authMode === 'sign-in' ? '/api/auth/sign-in' : '/api/auth/sign-up';
     const response = await callApi(() => api.post(url, payload));
     const tokenValue = response?.data?.data?.token;
@@ -237,7 +238,7 @@ function App() {
             <input type="number" value={bookForm.pages} onChange={(e) => setBookForm({ ...bookForm, pages: e.target.value })} />
           </label>
         </div>
-      </Section>
+      </Section>.0
 
       <Section title="Response">
         {message && <div className="alert success">{message}</div>}
